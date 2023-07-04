@@ -26,7 +26,7 @@ export default {
         .auth()
         .signInWithEmailAndPassword(this.email, this.password)
         .then((e) => {
-          console.log(e);
+          console.log(e); //remove
           this.$store.commit('setAdmin')
           this.$store.commit('setAdminName', e.user.email);
           console.log(this.$store.state.isAdmin, this.$store.state.adminName)

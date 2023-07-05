@@ -3,11 +3,11 @@ import VueRouter from 'vue-router'
 
 import firebase from 'firebase/compat/app';
 import 'firebase/compat/auth';
-//import 'firebase/compat/firestore';
 
 import HomeView from '../views/User/HomeView.vue'
 import ContactView from '../views/User/ContactView.vue'
 import Login from '../views/Admin/Login.vue'
+import Education from '../views/Admin/Education.vue'
 
 Vue.use(VueRouter)
 
@@ -46,7 +46,7 @@ const routes = [
     {
       path: '/education',
       name: 'Education',
-      component: () => import('../views/Admin/Education.vue'),
+      component: Education,
       meta: {
         requiresAuth: true,
       },

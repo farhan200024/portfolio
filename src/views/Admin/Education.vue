@@ -14,8 +14,9 @@ export default {
     };
   },
   methods: {
-  created(){
+    created(){
       this.adminName = this.$store.state.adminName
+      console.log('hahaha');
     }
   }
 };

@@ -10,13 +10,12 @@
 export default {
   data() {
     return {
-      adminName: this.$store.state.adminName 
+      adminName: this.$store.state.adminName
     };
   },
   methods: {
     created(){
       this.adminName = this.$store.state.adminName
-      console.log('hahaha');
     }
   }
 };

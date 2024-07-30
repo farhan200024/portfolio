@@ -32,7 +32,7 @@ const routes = [
   },
   { 
     path: '/admin/07438345320', 
-    name: 'login',
+    name: 'AdminLoginPage',
     component: Login
   },
   {
@@ -63,12 +63,12 @@ router.beforeEach((to, from, next) => {
   const requiresAuth = to.matched.some((record) => record.meta.requiresAuth);
 
   if (requiresAuth && !currentUser) {
-    next('/');
+    next('/admin/07438345320');
   } else {
     next();
   }
 
-  if (currentUser != null && to.name == 'login') {
+  if (currentUser != null && to.name == 'AdminLoginPage') {
     next('/dashboard');
   }
 });

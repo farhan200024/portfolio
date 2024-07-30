@@ -22,7 +22,6 @@ export default {
   },
   methods: {
     login() {
-    //farhan.aslam330@gmail.com - Test123
       firebase
         .auth()
         .signInWithEmailAndPassword(this.email, this.password)
